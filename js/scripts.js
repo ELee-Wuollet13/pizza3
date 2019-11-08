@@ -1,15 +1,26 @@
 //Backend Logic
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 //UI Logic
 $(document).ready(function() {
-var nums = []
-  $("form").click(function(event) {
-    event.preventDefalut;
-var num = ($(this).val());
-console.log(num);
-nums.push(num)
-console.log("run");
+  $("form").submit(function(event) {
+    event.preventDefalut();
+    
+
+
+
   });
-console.log(nums);
 });

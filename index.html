@@ -1,65 +1,28 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
 <head>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/scripts.js"></script>
-  <meta charset="utf-8">
-  <title></title>
+  <title>Pizza Project</title>
 </head>
 <body>
   <div class="container">
     <form>
-      <div class="row">
-        <div class ="col">
-          <button id="1" value=1>
-            <p>1</p>
-          </div>
-          <div class ="col">
-            <button id="2" value=2>
-              <p>2</p>
-            </div>
-            <div class ="col">
-              <button id="3" value="3">
-                <p>3</p>
-              </div>
-            </div>
-
-
-
-            <div class="row">
-              <div class ="col">
-                <button id="4" value="4">
-                  <p>4</p>
-                </div>
-                <div class ="col">
-                  <button id="5" value="5">
-                    <p>5</p>
-                  </div>
-                  <div class ="col">
-                    <button id="6" value="6">
-                      <p>6</p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class ="col">
-                      <button id="7" value="7">
-                        <p>7</p>
-                      </div>
-                      <div class ="col">
-                        <button id="8" value="8">
-                          <p>8</p>
-                        </div>
-                        <div class ="col">
-                          <button id="9" value="9">
-                            <p>9</p>
-                          </div>
-                        </div>
-
-                      </form>
-
-                    </div>
-                  </body>
-                  </html>
+      <div class="size">
+        <input type="radio" name="size" value="med"> Medium<br>
+        <input type="radio" name="size" value="lrg"> large<br>
+        <input type="radio" name="size" value="xlrg"> Ex-Large
+      </div>
+      <div class="topping">
+        <input type="radio" name="topping" value="cheese"> cheese<br>
+        <input type="radio" name="topping" value="veggies"> veggies<br>
+        <input type="radio" name="topping" value="meat"> Meat
+      </div>
+    </form>
+    <button type="submit" name="button">Place Order</button>
+  </div>
+</body>
+</html>
