@@ -4,12 +4,13 @@
 function Order(size, topping, price) {
   this.size = size,
   this.topping = topping,
-  this.price = price.setPrice
+  this.price = price
   console.log("order");
 }
 
 Order.prototype.setPrice = function(size, topping, price) {
   console.log("price is working");
+  var price = 8;
   if ((this.size === "xlrg") && (this.topping !== "cheese")) {
     return price += 8;
     console.log(price);
@@ -32,11 +33,12 @@ $(document).ready(function() {
     console.log(size);
     var topping = $("input:radio[name=topping]:checked").val();
     console.log(topping);
-    var price = 8;
-    var newOrder = new Order(size, topping, price)
+    var newOrder = new Order(size, topping)
     console.log(newOrder);
     var price = newOrder.setPrice(size, topping)
     console.log(price);
     event.preventDefault();
+//Display to user
+    $(".output").text(newOrder, price)
   });
 });
