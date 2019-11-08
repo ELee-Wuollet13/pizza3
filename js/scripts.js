@@ -20,7 +20,6 @@ function Order(size, topping) {
 $(document).ready(function() {
   $("form").submit(function(event) {
     var size = $("#size").val()
-    console.log(size);
     var topping = $("#topping").val()
     event.preventDefault();
     var newOrder = new Order(size, topping)
