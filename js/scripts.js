@@ -39,6 +39,6 @@ $(document).ready(function() {
     console.log(price);
     event.preventDefault();
 //Display to user
-    $(".output").text(newOrder, price)
+    $(".output").text(newOrder)
   });
 });
