@@ -1,35 +1,42 @@
 //Backend Logic
 
 
-function order(size, topping, price) {
+function Order(size, topping, price) {
   this.size = size,
   this.topping = topping,
   this.price = price
   console.log("order");
 }
 
-order.prototype.setPrice = function() {
+Order.prototype.setPrice = function(size, topping) {
   var price = 8;
-  console.log("price");
-  if ((this.size === xlrg) && (this.topping !== cheese)) {
+  console.log("price is working");
+  if ((this.size === "xlrg") && (this.topping !== "cheese")) {
     return price += 8;
     console.log(price);
-  } else if ((this.size === xlrg) && (this.topping === cheese) || (this.size === lrg) && (this.topping !== cheese)) {
+  } else if ((this.size === "xlrg") && (this.topping === "cheese") || (this.size === "lrg") && (this.topping !== "cheese")) {
     return price + 6;
-  } else if ((this.size === lrg) && (this.topping === cheese) || (this.size === med) && (this.topping !== cheese)) {
+    console.log(price);
+  } else if ((this.size === "lrg") && (this.topping === "cheese") || (this.size === "med") && (this.topping !== "cheese")) {
     return price + 3;
+    console.log(price);
   }   else {
     return price;
+    console.log("price");
   }
 }
 
 //UI Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
-    var size = $("#size").val()
-    var topping = $("#topping").val()
-    event.preventDefault();
-    var newOrder = new order(size, topping)
+    var size = $(("#size").val())
+    console.log(size);
+    var topping = $(("#topping").val())
+    console.log(topping);
+    var newOrder = new Order(size, topping)
     console.log(newOrder);
+    var price = newOrder.setPrice(size, topping)
+    console.log(price);
+    event.preventDefault();
   });
 });
