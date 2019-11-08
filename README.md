@@ -2,7 +2,11 @@
 
 ## Description
 
-This program takes in use input and returns numbers them with those including three, two and one converted into strings.
+This program will take input from the user in the form of radio buttons for size and topping
+It will create an object 'order' containing the inputs
+It will run 'Price' on the 'order' to determine the price and add it to the order
+Finally it will return to display to the user
+
 
 ## Setup Instructions
 
