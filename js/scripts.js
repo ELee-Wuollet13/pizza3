@@ -4,12 +4,11 @@
 function Order(size, topping, price) {
   this.size = size,
   this.topping = topping,
-  this.price = price
+  this.price = price.setPrice
   console.log("order");
 }
 
-Order.prototype.setPrice = function(size, topping) {
-  var price = 8;
+Order.prototype.setPrice = function(size, topping, price) {
   console.log("price is working");
   if ((this.size === "xlrg") && (this.topping !== "cheese")) {
     return price += 8;
@@ -29,11 +28,12 @@ Order.prototype.setPrice = function(size, topping) {
 //UI Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
-    var size = $(("#size").val())
+    var size = $("input:radio[name=size]:checked").val();
     console.log(size);
-    var topping = $(("#topping").val())
+    var topping = $("input:radio[name=topping]:checked").val();
     console.log(topping);
-    var newOrder = new Order(size, topping)
+    var price = 8;
+    var newOrder = new Order(size, topping, price)
     console.log(newOrder);
     var price = newOrder.setPrice(size, topping)
     console.log(price);
