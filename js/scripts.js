@@ -26,6 +26,9 @@ Order.prototype.setPrice = function(size, topping, price) {
   }
 }
 
+// .texthtmlOrder += "<li id=" + Order.size + ">" + Order.topping + " " + Order.price + "</li>";
+
+
 //UI Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
@@ -39,6 +42,7 @@ $(document).ready(function() {
     console.log(price);
     event.preventDefault();
 //Display to user
-    $(".output").text(newOrder)
+    $("#output").text(Order)
   });
-});
+
+  });
