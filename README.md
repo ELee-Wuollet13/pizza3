@@ -10,7 +10,7 @@ Finally it will return to display to the user
 
 ## Setup Instructions
 
-Either follow this like:  https://elee-wuollet13.github.io/Project3/
+Either follow this like: https://elee-wuollet13.github.io/pizza3/
 Or access the page through Github a link to my hithub repository and clone the program directly.
 
 ## Known Bugs
