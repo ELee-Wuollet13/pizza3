@@ -8,6 +8,13 @@ It will run 'Price' on the 'order' to determine the price and add it to the orde
 Finally it will return to display to the user
 
 
+## Specs
+| Behavior | Input Example  | Output Example |
+|----------|----------------|----------------|
+|This will return the ordered pizza | large cheese | A large cheese pizza for 11 dollars |
+| Will increase price for non-cheese pizza | large veggie | A large veggie pizza for 14 dollars |
+| Will increase price for based on size | extra-large veggie | An extra large veggie pizza for 16 dollars |
+
 ## Setup Instructions
 
 Either follow this like: https://elee-wuollet13.github.io/pizza3/
