@@ -1,48 +1,34 @@
 //Backend Logic
 
 
-function Order(size, topping, price) {
+function Order(size, topping) {
   this.size = size,
   this.topping = topping,
-  this.price = price
-  console.log("order");
+  this.price = 8
 }
 
-Order.prototype.setPrice = function(size, topping, price) {
-  console.log("price is working");
-  var price = 8;
+Order.prototype.setPrice = function(size, topping) {
   if ((this.size === "xlrg") && (this.topping !== "cheese")) {
-    return price += 8;
-    console.log(price);
+    this.price += 8;
   } else if ((this.size === "xlrg") && (this.topping === "cheese") || (this.size === "lrg") && (this.topping !== "cheese")) {
-    return price + 6;
-    console.log(price);
-  } else if ((this.size === "lrg") && (this.topping === "cheese") || (this.size === "med") && (this.topping !== "cheese")) {
-    return price + 3;
-    console.log(price);
-  }   else {
-    return price;
-    console.log("price");
+    this.price += 6;
+  } else {
+    this.price += 3;
   }
 }
-
-// .texthtmlOrder += "<li id=" + Order.size + ">" + Order.topping + " " + Order.price + "</li>";
 
 
 //UI Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
     var size = $("input:radio[name=size]:checked").val();
-    console.log(size);
     var topping = $("input:radio[name=topping]:checked").val();
-    console.log(topping);
     var newOrder = new Order(size, topping)
+    newOrder.setPrice()
     console.log(newOrder);
-    var price = newOrder.setPrice(size, topping)
-    console.log(price);
     event.preventDefault();
 //Display to user
-    $("#output").text(Order)
+    $("#output").html("<h3>" + newOrder.size + "</h3><br><h3>" + newOrder.topping + "</h3><br><h3>" + newOrder.price + "</h3>");
   });
 
   });
