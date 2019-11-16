@@ -1,5 +1,4 @@
 .size {
-
   margin: 10px;
 }
 
@@ -17,19 +16,19 @@
   padding-bottom: 100px;
 }
 
-.imgcheese {
+#imgcheese {
   float: right;
   display: none;
   width: 500px;
 }
 
-.imgmeat {
+#imgmeat {
   float: right;
   display: none;
   width: 500px;
 }
 
-.imgveggie {
+#imgveggie {
   float: right;
   display: none;
   width: 500px;

@@ -1,6 +1,4 @@
 //Backend Logic
-
-
 function Order(size, topping) {
   this.size = size,
   this.topping = topping,
@@ -17,7 +15,6 @@ Order.prototype.setPrice = function(size, topping) {
   }
 }
 
-
 //UI Logic
 $(document).ready(function() {
   $("form").submit(function(event) {
@@ -25,19 +22,24 @@ $(document).ready(function() {
     var topping = $("input:radio[name=topping]:checked").val();
     var newOrder = new Order(size, topping)
     newOrder.setPrice()
+    // newOrder.showPizza()
     console.log(newOrder);
     event.preventDefault();
-//Display to user
-    if (this.topping = "meat"){
-      $(".imgmeat").show()
-    } else if (this.topping = "veggies") {
-      $(".imgveggies").show()
-    } else if (this.topping = "cheese") {
-      $(".imgcheese").show()
-    } else {
-      $("imgpizzadudes").show()
-    }
-    $("#output").html("<h3>" + newOrder.size + "</h3><br><h3>" + newOrder.topping + "</h3><br><h3>" + newOrder.price + "</h3>");
-  });
 
+    //Display to user
+    $("#output").html("<h3> Your order </h3><br><p>You ordered one " + newOrder.size + " pizza with" + newOrder.topping + ". Your total will be $" + newOrder.price + " on pickup. Thanks for coming to Joe's simple pie, keeping pizza the way it should be.");
   });
+});
+// $("#img +" this.topping).show()
+// $(".imgveggies").show()
+// $(".imgcheese").show()
+// Order.prototype.showPizza = function(topping) {
+  //   if (this.topping = "meat"){
+    //   } else if (this.topping = "veggies") {
+      //   } else if (this.topping = "cheese") {
+        //     $(".imgmeat").hide()
+        //   } else {
+          //     $("imgpizzadudes").show()
+          //     $(".imgmeat").hide()
+          //   }
+          // }
